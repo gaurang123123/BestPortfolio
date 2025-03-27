@@ -26,3 +26,11 @@ function scrollCarousel(direction) {
         container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     }
 }
+
+
+var typed = new Typed(".auto-type",{
+    strings:["Web Developer","Android Developer","Video Editor"],
+    typeSpeed:150,
+    backSpeed:150,
+    loop: true
+})

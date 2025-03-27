@@ -136,8 +136,9 @@ padding: 24px 30px;
     margin: auto; 
 }
 .text-big{
-    font-size: 28px;
-    color: #c9dfeb;
+  font-size: 28px;
+  color: #f6f8f9;
+  text-shadow: 0px 0px 10px #c9dfeb;
 }
 .text-big-new{
   font-size: 24px;
@@ -1018,6 +1019,15 @@ padding: 24px 30px;
   .certificate-container:hover .certificate-text {
       opacity: 1;
   }
+
+
+  .container-moving h1{
+    color: #fff;
+    font-size: 20px;
+}
+.container-moving span{
+    color: blue;
+} 
 
   /* Responsive Design */
   @media (max-width: 650px) {
