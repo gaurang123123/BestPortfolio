@@ -8,25 +8,27 @@
   </head>
 
   <body>
-    <nav class="navbar h-nav-resp">
+    <nav class="navbar h-nav-resp hidden">
       <div class="div-img">
         <div class="logo"><img src="images/profimage.png" alt="logo" /></div>
         <h1 class="label">PortFolio</h1>
       </div>
-      <ul class="nav-list v-class-resp">
+      <ul class="nav-list v-class-resp" id="sidemenu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
+        <h3 onClick="closeMenu()">✖</h3>
       </ul>
-      <div class="burger">
+      <div class="burger" onClick="openMenu()">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
       </div>
     </nav>
 
-    <section class="background firstSection">
+    <section class="background firstSection" id="home">
       <div class="box-main">
         <div class="firstHalf">
           <p class="text-small">Hello, I am</p>
@@ -108,7 +110,7 @@
           <button class="glow-button">Download CV</button>
         </div>
         <div class="secondHalf">
-          <div class="img-box">
+          <div class="img-box hidden">
             <img src="./images/pattern.png" class="back-img updown-animation" />
             <img src="./images/profi.png" class="main-img updown-animation" />
           </div>
@@ -170,8 +172,8 @@
 
 <!-- about me -->
 
-    <h1 class="sub-title-new">My Services</h1>
-    <div class="container">
+    <h1 class="sub-title-new" id="services">My Services</h1>
+    <div class="container" >
       <div class="card">
         <div class="content">
           <h2>01</h2>
@@ -261,7 +263,7 @@
         </div>
       </div>
     </div> -->
-    <h1 class="sub-title-new">My Work</h1>
+    <h1 class="sub-title-new" id="portfolio">My Work</h1>
     <div class="carousel-wrapper">
       <button class="prev" onclick="scrollCarousel(-1)">&#10094;</button>
       <div class="carousel-container" id="carousel">
@@ -377,7 +379,7 @@
           <div class="certificate-text">Certified in UI/UX Design</div>
       </div>
   </div>
-    <div class="contact-container">
+    <div class="contact-container" id="contact">
       <h2>Contact Me</h2>
       <p>Let's work together! Send me a message and I'll get back to you.</p>
 
@@ -403,7 +405,7 @@
     <footer class="footer">
       <div class="footer-logo">My Portfolio</div>
       <p>Building creative and functional web experiences.</p>
-
+      <p>PH No. +917818801206 | Email ID gaurangag06@gmail.com</p>
       <p class="copyright">&copy; 2025 My Portfolio. All rights reserved.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

@@ -34,3 +34,35 @@ var typed = new Typed(".auto-type",{
     backSpeed:150,
     loop: true
 })
+
+var sidemenu = document.getElementById("sidemenu")
+function openMenu(){
+    sidemenu.style.right="0"
+}
+function closeMenu(){
+    sidemenu.style.right = "-200px"
+}
+
+let lastScrollY = window.scrollY; // Track last scroll position
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const currentScrollY = window.scrollY;
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            entry.target.classList.remove("hide");
+        } else {
+            if (currentScrollY < lastScrollY) { // If scrolling up
+                entry.target.classList.add("hide"); // Hide the element
+                entry.target.classList.remove("show");
+            }
+        }
+
+        lastScrollY = currentScrollY; // Update last scroll position
+    });
+}, { threshold: 0.2 });
+
+document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
+
+
